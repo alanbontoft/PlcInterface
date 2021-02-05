@@ -6,6 +6,7 @@ ApplicationWindow {
     width: 640
     height: 480
     visible: true
+    // visibility: "Fullscreen"
     title: qsTr("Stack")
 
     header: ToolBar {
@@ -94,18 +95,8 @@ ApplicationWindow {
 
     StackView {
         id: stackView
-        initialItem: "HomeForm.ui.qml"
+        initialItem: "HomeForm.qml"
         anchors.fill: parent
     }
-/*
-    Page1Form {
-        id: page1
-        visible: false
-    }
-
-    Page2Form {
-        id: page2
-        visible: false
-    }*/
 }
 

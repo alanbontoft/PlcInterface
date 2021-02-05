@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     // hide cursor for touch app
-    QGuiApplication::setOverrideCursor(QCursor(Qt::BlankCursor));
+    // QGuiApplication::setOverrideCursor(QCursor(Qt::BlankCursor));
 
     qmlRegisterUncreatableType<DataModel>("MyDataModels", 1, 0, "DataModel", "DataModel is uncreatable type");
     qmlRegisterUncreatableType<DataList>("MyDataModels", 1, 0, "DataList", "DataList is uncreatable type");
