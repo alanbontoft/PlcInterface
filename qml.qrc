@@ -7,5 +7,6 @@
         <file>qtquickcontrols2.conf</file>
         <file>PlainPage.qml</file>
         <file>images/green_logo_trans.png</file>
+        <file>Readings.qml</file>
     </qresource>
 </RCC>

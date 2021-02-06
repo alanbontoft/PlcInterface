@@ -5,7 +5,7 @@ Page {
 
     title: qsTr("Page 1")
 
-    anchors.fill: parent
+    // anchors.fill: parent
 
     SwipeView {
         id: swipeView
@@ -14,6 +14,7 @@ Page {
 
         Repeater{
             model: TheDataList.size
+            /*
             PlainPage {
                 id: page1
                 modelIndex: index
@@ -22,8 +23,13 @@ Page {
                 pageColor: "red"
                 buttonText: "Page " + index
                 visible: true
-            }
+            }*/
 
+            Readings {
+                height: swipeView.height
+                width: swipeView.width
+
+            }
         }
 
     }
