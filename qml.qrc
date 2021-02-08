@@ -8,5 +8,6 @@
         <file>PlainPage.qml</file>
         <file>images/green_logo_trans.png</file>
         <file>Readings.qml</file>
+        <file>ScreenSaver.qml</file>
     </qresource>
 </RCC>

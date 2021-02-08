@@ -7,16 +7,10 @@ Page {
 
     title: qsTr("Home")
 
-    /*Label {
-        text: qsTr("You are on the home page.")
-        anchors.centerIn: parent
-    }*/
-
     Image {
         anchors.centerIn: parent
         source: Qt.resolvedUrl("qrc:/images/green_logo_trans.png")
         height: 150
         fillMode: Image.PreserveAspectFit
-        //width: 200
     }
 }

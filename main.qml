@@ -95,7 +95,8 @@ ApplicationWindow {
 
     StackView {
         id: stackView
-        initialItem: "HomeForm.qml"
+        // initialItem: "HomeForm.qml"
+        initialItem: "ScreenSaver.qml"
         anchors.fill: parent
     }
 }
