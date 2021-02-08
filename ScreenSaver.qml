@@ -6,30 +6,16 @@ Page {
     id: root
     anchors.fill: parent
 
-    property int _margin: 10
+    property int margin: 50
+    property int targetWidth
+    property int targetHeight
 
     Image {
         id: logo
-        x: _margin; y: _margin
+        x: margin; y: margin
         source: Qt.resolvedUrl("qrc:/images/green_logo_trans.png")
         height: 100
         fillMode: Image.PreserveAspectFit
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: {
-            /*console.log(root.width)
-            console.log(logo.width)
-            console.log(root.width - logo.width)
-            console.log(logo.x)
-            console.log(logo.y)*/
-
-            console.log("Left X: " + sequAnim._left_x)
-            console.log("Right X: " + sequAnim._right_x)
-            console.log("Top Y: " + sequAnim._top_y)
-            console.log("Bottom Y: " + sequAnim._bottom_y)
-        }
     }
 
     SequentialAnimation {
@@ -37,14 +23,10 @@ Page {
         loops: Animation.Infinite
         running: true
 
-        // readonly property int _left_x: root._margin
-        // readonly property int _right_x: root.width - logo.width - root._margin
-        // readonly property int _top_y: root._margin
-        // readonly property int _bottom_y: root.height - logo.height - root._margin
-        readonly property int _left_x: 10
-        readonly property int _right_x: 338
-        readonly property int _top_y: 10
-        readonly property int _bottom_y: 322
+        readonly property int _left_x: root.margin
+        readonly property int _right_x: targetWidth - logo.width - root.margin
+        readonly property int _top_y: root.margin
+        readonly property int _bottom_y: targetHeight - logo.height - root.margin
         readonly property int _duration: 3000
 
         ParallelAnimation {

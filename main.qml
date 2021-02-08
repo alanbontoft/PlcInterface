@@ -10,6 +10,7 @@ ApplicationWindow {
     title: qsTr("Stack")
 
     header: ToolBar {
+        id: toolbar
         contentHeight: toolButton.implicitHeight
 
         ToolButton {
@@ -46,7 +47,6 @@ ApplicationWindow {
                 width: parent.width
                 onClicked: {
                     stackView.push("Page1Form.qml")
-                    // stackView.push(page1)
                     drawer.close()
                 }
             }
@@ -55,7 +55,6 @@ ApplicationWindow {
                 width: parent.width
                 onClicked: {
                     stackView.push("Page2Form.qml")
-                    // stackView.push(page2)
                     drawer.close()
                 }
             }
@@ -84,19 +83,13 @@ ApplicationWindow {
                     verticalAlignment: TextEdit.AlignVCenter
                 }
             }
-
-
-
-
-
-
         }
     }
 
     StackView {
         id: stackView
         // initialItem: "HomeForm.qml"
-        initialItem: "ScreenSaver.qml"
+        initialItem: ScreenSaver { targetHeight: window.height - toolbar.height; targetWidth: window.width; margin: 50 }
         anchors.fill: parent
     }
 }
